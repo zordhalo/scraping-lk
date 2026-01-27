@@ -35,6 +35,12 @@ DOWNLOADER_MIDDLEWARES = {
     "scrapy_zyte_api.ScrapyZyteAPIDownloaderMiddleware": 1000,
 }
 
+# Required download handlers for Zyte API
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_zyte_api.ScrapyZyteAPIDownloadHandler",
+    "https": "scrapy_zyte_api.ScrapyZyteAPIDownloadHandler",
+}
+
 # Enable or disable extensions
 # EXTENSIONS = {
 #     "scrapy.extensions.telnet.TelnetConsole": None,
@@ -62,6 +68,9 @@ ZYTE_API_KEY = os.environ.get("ZYTE_API_KEY", "")
 
 # Enable Zyte API for all requests
 ZYTE_API_ENABLED = True
+
+# Enable transparent mode to route all requests through Zyte API
+ZYTE_API_TRANSPARENT_MODE = True
 
 # Configure Zyte API to return HTTP response body and headers
 # This tells Zyte API what content to fetch and return
