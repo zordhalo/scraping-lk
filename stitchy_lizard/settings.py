@@ -63,5 +63,12 @@ ZYTE_API_KEY = os.environ.get("ZYTE_API_KEY", "")
 # Enable Zyte API for all requests
 ZYTE_API_ENABLED = True
 
-# Use browser rendering for JavaScript-heavy pages (optional)
+# Configure Zyte API to return HTTP response body and headers
+# This tells Zyte API what content to fetch and return
+ZYTE_API_AUTOMAP_PARAMS = {
+    "httpResponseBody": True,
+    "httpResponseHeaders": True,
+}
+
+# Use browser rendering for JavaScript-heavy pages (enable if needed)
 # ZYTE_API_BROWSER_HTML = True
