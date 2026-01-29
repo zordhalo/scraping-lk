@@ -1,3 +1,0 @@
-scrapy>=2.11
-scrapy-zyte-api>=0.11
-Pillow>=10.0
